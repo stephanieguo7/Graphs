@@ -1,0 +1,22 @@
+The user inputs a file containing the information needed to construct the graph.  The text file must be of this format:
+
+A B C D E F G
+A B,4 C,9
+B D,1 G,7
+C G,1
+D H,1
+E C,2 G,5
+G F,3 A,4
+
+The first line lists all of the vertices in the graph.  Every line after lists the edges as well as the weights.  
+
+The first vertex starting in the second line is the starting vertex, and every vertex after the first is what it points to.  The vertex the starting vertex points to is associated with a weight, which is separated by a comma.  So an edge is constructed from the starting vertex to each of the vertices after it.  For instance, the second line shows that there is an edge from A to B with a weight of 4, and an edge from A to C with a weight of 9.  If the user does not follow this format, the program will raise exceptions that notify the user. 
+
+After the user loads the text file into the program, the console will prompt the user for what he/she wants to do with the information.  Here are the features:
+
+	1. See if the graph is connected
+	2. Return the number of connected components
+	3. Finds the shortest path from one to another
+	4. Finds the minimum spanning tree using Prim's or Kruskal's algorithm
+	5. Create a new graph
+
